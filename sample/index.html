@@ -34,9 +34,6 @@
 					<div class="editor-container">
 						<div class="editor">
 							<h2>Bilingual Personality Disorder</h2>
-							<figure class="image image-style-side"><img src="https://c.cksource.com/a/1/img/docs/sample-image-bilingual-personality-disorder.jpg">
-								<figcaption>One language, one person.</figcaption>
-							</figure>
 							<p>
 								This may be the first time you hear about this made-up disorder but
 								it actually isn’t so far from the truth. Even the studies that were conducted almost half a century show that
@@ -104,7 +101,33 @@
 			</p>
 		</footer>
 		<script src="../build/ckeditor.js"></script>
-		<script>ClassicEditor
+		<script>
+			const watchdog = new CKSource.EditorWatchdog();
+			
+			window.watchdog = watchdog;
+			
+			watchdog.setCreator( ( element, config ) => {
+				return CKSource.Editor
+					.create( element, config )
+					.then( editor => {
+						
+						
+						
+			
+						return editor;
+					} )
+			} );
+			
+			watchdog.setDestructor( editor => {
+				
+				
+			
+				return editor.destroy();
+			} );
+			
+			watchdog.on( 'error', handleError );
+			
+			watchdog
 				.create( document.querySelector( '.editor' ), {
 					
 					licenseKey: '',
@@ -112,19 +135,15 @@
 					
 					
 				} )
-				.then( editor => {
-					window.editor = editor;
+				.catch( handleError );
 			
-					
-					
-					
-				} )
-				.catch( error => {
-					console.error( 'Oops, something went wrong!' );
-					console.error( 'Please, report the following error on https://github.com/ckeditor/ckeditor5/issues with the build id and the error stack trace:' );
-					console.warn( 'Build id: wm7rdc46kg4d-y7rf4s9zf02d' );
-					console.error( error );
-				} );
+			function handleError( error ) {
+				console.error( 'Oops, something went wrong!' );
+				console.error( 'Please, report the following error on https://github.com/ckeditor/ckeditor5/issues with the build id and the error stack trace:' );
+				console.warn( 'Build id: 4jwlnuvvoehv-y7rf4s9zf02d' );
+				console.error( error );
+			}
+			
 		</script>
 	</body>
 </html>
