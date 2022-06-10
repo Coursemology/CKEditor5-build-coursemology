@@ -43,7 +43,6 @@ import TableColumnResize from '@ckeditor/ckeditor5-table/src/tablecolumnresize.j
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar.js';
 import Underline from '@ckeditor/ckeditor5-basic-styles/src/underline.js';
 import WordCount from '@ckeditor/ckeditor5-word-count/src/wordcount.js';
-import EditorWatchdog from '@ckeditor/ckeditor5-watchdog/src/editorwatchdog.js';
 
 class Editor extends ClassicEditor {}
 
@@ -99,16 +98,16 @@ Editor.defaultConfig = {
 			'fontSize',
 			'|',
 			'bold',
+			'italic',
 			'underline',
 			'strikethrough',
-			'italic',
 			'code',
 			'codeBlock',
 			'blockQuote',
 			'removeFormat',
 			'|',
-			'superscript',
 			'subscript',
+			'superscript',
 			'|',
 			'fontFamily',
 			'fontColor',
@@ -143,4 +142,4 @@ Editor.defaultConfig = {
 	}
 };
 
-export default { Editor, EditorWatchdog };
+export default Editor;
