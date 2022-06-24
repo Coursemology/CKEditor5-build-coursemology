@@ -5,18 +5,17 @@
 import ClassicEditor from '@ckeditor/ckeditor5-editor-classic/src/classiceditor.js';
 import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment.js';
 import Autoformat from '@ckeditor/ckeditor5-autoformat/src/autoformat.js';
+import AutoImage from '@ckeditor/ckeditor5-image/src/autoimage.js';
 import BlockQuote from '@ckeditor/ckeditor5-block-quote/src/blockquote.js';
 import Bold from '@ckeditor/ckeditor5-basic-styles/src/bold.js';
 import Code from '@ckeditor/ckeditor5-basic-styles/src/code.js';
 import CodeBlock from '@ckeditor/ckeditor5-code-block/src/codeblock.js';
 import Essentials from '@ckeditor/ckeditor5-essentials/src/essentials.js';
-import FindAndReplace from '@ckeditor/ckeditor5-find-and-replace/src/findandreplace.js';
 import FontColor from '@ckeditor/ckeditor5-font/src/fontcolor.js';
 import FontFamily from '@ckeditor/ckeditor5-font/src/fontfamily.js';
 import FontSize from '@ckeditor/ckeditor5-font/src/fontsize.js';
 import Heading from '@ckeditor/ckeditor5-heading/src/heading.js';
 import Highlight from '@ckeditor/ckeditor5-highlight/src/highlight.js';
-import HorizontalLine from '@ckeditor/ckeditor5-horizontal-line/src/horizontalline.js';
 import ImageInline from '@ckeditor/ckeditor5-image/src/imageinline.js';
 import ImageResize from '@ckeditor/ckeditor5-image/src/imageresize.js';
 import ImageUpload from '@ckeditor/ckeditor5-image/src/imageupload.js';
@@ -26,15 +25,8 @@ import Italic from '@ckeditor/ckeditor5-basic-styles/src/italic.js';
 import Link from '@ckeditor/ckeditor5-link/src/link.js';
 import List from '@ckeditor/ckeditor5-list/src/list.js';
 import ListProperties from '@ckeditor/ckeditor5-list/src/listproperties.js';
-import MediaEmbed from '@ckeditor/ckeditor5-media-embed/src/mediaembed.js';
 import Paragraph from '@ckeditor/ckeditor5-paragraph/src/paragraph.js';
 import RemoveFormat from '@ckeditor/ckeditor5-remove-format/src/removeformat.js';
-import SimpleUploadAdapter from '@ckeditor/ckeditor5-upload/src/adapters/simpleuploadadapter.js';
-import SourceEditing from '@ckeditor/ckeditor5-source-editing/src/sourceediting.js';
-import SpecialCharacters from '@ckeditor/ckeditor5-special-characters/src/specialcharacters.js';
-import SpecialCharactersArrows from '@ckeditor/ckeditor5-special-characters/src/specialcharactersarrows.js';
-import SpecialCharactersEssentials from '@ckeditor/ckeditor5-special-characters/src/specialcharactersessentials.js';
-import SpecialCharactersMathematical from '@ckeditor/ckeditor5-special-characters/src/specialcharactersmathematical.js';
 import Strikethrough from '@ckeditor/ckeditor5-basic-styles/src/strikethrough.js';
 import Subscript from '@ckeditor/ckeditor5-basic-styles/src/subscript.js';
 import Superscript from '@ckeditor/ckeditor5-basic-styles/src/superscript.js';
@@ -43,7 +35,6 @@ import TableCellProperties from '@ckeditor/ckeditor5-table/src/tablecellproperti
 import TableColumnResize from '@ckeditor/ckeditor5-table/src/tablecolumnresize.js';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar.js';
 import Underline from '@ckeditor/ckeditor5-basic-styles/src/underline.js';
-import WordCount from '@ckeditor/ckeditor5-word-count/src/wordcount.js';
 
 class Editor extends ClassicEditor {}
 
@@ -51,18 +42,17 @@ class Editor extends ClassicEditor {}
 Editor.builtinPlugins = [
 	Alignment,
 	Autoformat,
+	AutoImage,
 	BlockQuote,
 	Bold,
 	Code,
 	CodeBlock,
 	Essentials,
-	FindAndReplace,
 	FontColor,
 	FontFamily,
 	FontSize,
 	Heading,
 	Highlight,
-	HorizontalLine,
 	ImageInline,
 	ImageResize,
 	ImageUpload,
@@ -72,15 +62,8 @@ Editor.builtinPlugins = [
 	Link,
 	List,
 	ListProperties,
-	MediaEmbed,
 	Paragraph,
 	RemoveFormat,
-	SimpleUploadAdapter,
-	SourceEditing,
-	SpecialCharacters,
-	SpecialCharactersArrows,
-	SpecialCharactersEssentials,
-	SpecialCharactersMathematical,
 	Strikethrough,
 	Subscript,
 	Superscript,
@@ -88,8 +71,7 @@ Editor.builtinPlugins = [
 	TableCellProperties,
 	TableColumnResize,
 	TableToolbar,
-	Underline,
-	WordCount
+	Underline
 ];
 
 // Editor configuration.
@@ -120,17 +102,10 @@ Editor.defaultConfig = {
 			'bulletedList',
 			'numberedList',
 			'alignment',
-			'horizontalLine',
 			'|',
 			'insertTable',
-			'|',
-			'link',
 			'imageUpload',
-			'mediaEmbed',
-			'|',
-			'findAndReplace',
-			'specialCharacters',
-			'sourceEditing'
+			'link'
 		]
 	},
 	language: 'en',
