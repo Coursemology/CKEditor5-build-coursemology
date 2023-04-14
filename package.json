@@ -1,9 +1,6 @@
 {
-  "name": "ckeditor5-custom-build",
-  "author": "CKSource",
-  "description": "A custom CKEditor 5 build made by the CKEditor 5 online builder.",
+  "name": "@ckeditor/ckeditor5-build-custom",
   "version": "0.0.1",
-  "license": "SEE LICENSE IN LICENSE.md",
   "private": true,
   "main": "./build/ckeditor.js",
   "devDependencies": {
@@ -23,6 +20,7 @@
     "@ckeditor/ckeditor5-indent": "^34.1.0",
     "@ckeditor/ckeditor5-link": "^34.1.0",
     "@ckeditor/ckeditor5-list": "^34.1.0",
+    "@ckeditor/ckeditor5-media-embed": "^34.1.0",
     "@ckeditor/ckeditor5-paragraph": "^34.1.0",
     "@ckeditor/ckeditor5-remove-format": "^34.1.0",
     "@ckeditor/ckeditor5-table": "^34.1.0",
