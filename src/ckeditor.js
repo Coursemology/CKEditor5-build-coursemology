@@ -25,6 +25,7 @@ import Italic from '@ckeditor/ckeditor5-basic-styles/src/italic.js';
 import Link from '@ckeditor/ckeditor5-link/src/link.js';
 import List from '@ckeditor/ckeditor5-list/src/list.js';
 import ListProperties from '@ckeditor/ckeditor5-list/src/listproperties.js';
+import MediaEmbed from '@ckeditor/ckeditor5-media-embed/src/mediaembed.js';
 import Paragraph from '@ckeditor/ckeditor5-paragraph/src/paragraph.js';
 import RemoveFormat from '@ckeditor/ckeditor5-remove-format/src/removeformat.js';
 import Strikethrough from '@ckeditor/ckeditor5-basic-styles/src/strikethrough.js';
@@ -62,6 +63,7 @@ Editor.builtinPlugins = [
 	Link,
 	List,
 	ListProperties,
+	MediaEmbed,
 	Paragraph,
 	RemoveFormat,
 	Strikethrough,
@@ -105,7 +107,8 @@ Editor.defaultConfig = {
 			'|',
 			'insertTable',
 			'imageUpload',
-			'link'
+			'link',
+			'mediaEmbed'
 		]
 	},
 	language: 'en',
