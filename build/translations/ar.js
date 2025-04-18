@@ -1,1 +1,0 @@
-!function(n){const i=n.ar=n.ar||{};i.dictionary=Object.assign(i.dictionary||{},{}),i.getPluralForm=function(n){return 0==n?0:1==n?1:2==n?2:n%100>=3&&n%100<=10?3:n%100>=11&&n%100<=99?4:5}}(window.CKEDITOR_TRANSLATIONS||(window.CKEDITOR_TRANSLATIONS={}));

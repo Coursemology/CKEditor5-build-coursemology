@@ -1,1 +1,0 @@
-!function(n){const i=n.az=n.az||{};i.dictionary=Object.assign(i.dictionary||{},{}),i.getPluralForm=function(n){return 1!=n}}(window.CKEDITOR_TRANSLATIONS||(window.CKEDITOR_TRANSLATIONS={}));

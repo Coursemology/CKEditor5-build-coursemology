@@ -1,1 +1,0 @@
-!function(n){const o=n["es-co"]=n["es-co"]||{};o.dictionary=Object.assign(o.dictionary||{},{}),o.getPluralForm=function(n){return 1==n?0:0!=n&&n%1e6==0?1:2}}(window.CKEDITOR_TRANSLATIONS||(window.CKEDITOR_TRANSLATIONS={}));
