@@ -1,13 +1,13 @@
 {
   "name": "coursemology-ckeditor",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "main": "build/index.js",
   "scripts": {
     "build": "webpack --mode production"
   },
   "devDependencies": {
     "@swc/core": "^1.11.21",
-    "ckeditor5": "^45.0.0",
+    "ckeditor5": "^47.2.0",
     "css-loader": "^7.1.2",
     "css-minimizer-webpack-plugin": "^7.0.2",
     "mini-css-extract-plugin": "^2.9.2",
