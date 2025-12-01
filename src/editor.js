@@ -20,6 +20,7 @@ import {
 } from "@ckeditor/ckeditor5-font/dist/index.js";
 import { Heading } from "@ckeditor/ckeditor5-heading/dist/index.js";
 import { Highlight } from "@ckeditor/ckeditor5-highlight/dist/index.js";
+import LinkFormExtension from './plugins/LinkFormExtension';
 import {
   AutoImage,
   ImageBlock,
@@ -111,6 +112,7 @@ ClassicEditor.defaultConfig = {
     shouldNotGroupWhenFull: false,
   },
   plugins: [
+    LinkFormExtension,
     Alignment,
     Autoformat,
     AutoImage,
@@ -183,6 +185,7 @@ ClassicEditor.defaultConfig = {
         },
       },
     },
+    toolbar: [ 'linkPreview', '|', 'editLink', 'unlink' ],
   },
   mediaEmbed: {
     removeProviders: [
